@@ -59,7 +59,9 @@ Chunk label 4 is the only valid option because it follows proper Quarto rules, w
 You have the following code chunk:
 
 ```{r}
-#| eval: false
+#| eval: true
+#| warning: false
+#| echo: true
     
 ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + 
   geom_point()
@@ -67,9 +69,9 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 
 Add the following code chunk options, one at a time, and set each to `false` and then to `true`. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code chunk. Based on the behaviors you observe, describe what each code chunk option does.
 
--   `echo`
--   `warning`
--   `eval`
+-   `echo`: true displays the code, false hides it.
+-   `warning`: true allows warnings to be displayed, but false hides any warnings.
+-   `eval`: true allows the plot to be displayed when rendered, but false hides this and only shows the code.
 
 ## Question 3
 
