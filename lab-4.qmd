@@ -210,6 +210,14 @@ Create a scatterplot of `y` versus `x` and color and facet it by `dataset`. Then
 When you both color and facet by the same variable, you'll end up with a redundant legend. Turn off the legend by adding `show.legend = FALSE` to the geom creating the legend.
 :::
 
+```{r}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset)) +
+  geom_point(show.legend = FALSE) + 
+  facet_wrap(~dataset) +
+  theme_minimal()
+```
+Each dataset shows wildly different patterns, despite them all having the same summary statistics. This shows the value of visualization, where only looking at the numbers may make us miss the data structure and relationships embedded within them.
+
 ::: render-commit-push
 Render, commit, and push one last time. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 
