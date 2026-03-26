@@ -9,6 +9,7 @@ categories: "Lab"
 
 library(datasauRus)
 library(tidyverse)
+library(palmerpenguins)
 ```
 
 # Introduction
@@ -21,28 +22,28 @@ In this lab you'll review and get practice with a variety of concepts, methods, 
 
 a.  Add each of strings below to the code chunk provided in your document, render the document, and determine if the string is a proper code chunk label. If not, explain why and describe how you could fix it so the document renders.
 
-    -   Chunk label 1:
+    -   Chunk label 1: Not a proper code chunk label because the line break breaks it. To fix it, get rid of the second part of the label.
 
-    ```         
+    ```     
     #| label: a-label 
     #| with-a-line-break
     ```
 
-    -   Chunk label 2:
+    -   Chunk label 2: Not a proper code chunk label because it's too long. I would change it to something like "long-label".
 
-    ```         
+    ```       
     #| label: areaaaaaaaaaaaaaaaaaaaaaallllllllllllllllllyyyyylooooooooooooooooooonglabel 
     ```
 
-    -   Chunk label 3:
+    -   Chunk label 3: Not a proper code chunk because of the spaces. I would change it to something like "label-with-spaces".
 
-    ```         
+    ```       
     #| label: label with spaces
     ```
 
-    -   Chunk label 4:
+    -   Chunk label 4: This is proper!
 
-    ```         
+    ```{r}         
     #| label: label-with-dashes
     ```
 
@@ -51,6 +52,7 @@ a.  Add each of strings below to the code chunk provided in your document, rende
     :::
 
 b.  Which of the chunk label options above is the best option? Explain your reasoning in 1-2 sentences.
+Chunk label 4 is the only valid option because it follows proper Quarto rules, with a single line, dashes instead of spaces, and it's not too long.
 
 ## Question 2
 
