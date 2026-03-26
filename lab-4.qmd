@@ -78,24 +78,32 @@ Add the following code chunk options, one at a time, and set each to `false` and
 a.  You have the following code chunk again.
 
     ```{r}
-    #| eval: false
+    #| eval: true
+    #| fig-width: 6
+    #| fig-asp: 0.6
 
     ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + 
       geom_point()
     ```
 
     Add `fig-width` and `fig-asp` as code chunk options. Try setting `fig-width` to values between 1 and 10. Try setting `fig-asp` to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.
+    
+    fig-width changes the figure width, i.e. make it narrower or wider. 
+    fig-asp changes the aspect ratio, so you could have a short/wide plot, or a tall/skinny plot.
 
 b.  You have the following code chunk, but look carefully, it's not exactly the same!
 
     ```{r}
     #| eval: false
+    #| error: false
 
     gplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + 
       geom_point()
     ```
 
     Add `error` as a code chunk option and set it to `false` and then set it to `true`. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.
+    
+    error: true doesn't allow the doc to render, while error: false tells it to render regardless of errors.
 
 ::: callout-tip
 Reading [the documentation](https://quarto.org/docs/reference/formats/pdf.html#execution) might also be hepful.
